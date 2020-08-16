@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Join.css";
 
-const Join = (props) => {
+const Join = () => {
   const [info, setInfo] = useState({
     name: "",
     room: "",
