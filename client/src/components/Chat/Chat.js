@@ -42,13 +42,13 @@ const Chat = ({ location }) => {
   // messages listener
   useEffect(() => {
     socket.on("message", (message) => {
-      setMessages([...messages, message]);
+      setMessages((m) => [...m, message]);
     });
 
     socket.on("roomData", ({ users }) => {
       setUsers(users);
     });
-  }, [messages]);
+  }, []);
 
   // sending messages
 
